@@ -10,17 +10,6 @@ using Microsoft.Extensions.Logging;
 
 namespace CasaDoCodigo
 {
-    //MELHORIA: ) Continuação do curso
-    //ASP.NET Core parte 2: Um e-Commerce com MVC e EF Core
-    //https://cursos.alura.com.br/course/aspnet-core-2-validacoes-seguranca
-
-
-
-
-
-
-
-
     //MELHORIA: 7) Projeto atualizado para ASP.NET Core 2.2
     //Veja propriedades do projeto
     public class Program
