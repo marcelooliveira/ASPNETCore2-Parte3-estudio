@@ -12,6 +12,11 @@ using System;
 
 namespace CasaDoCodigo
 {
+    //DB 1): Startup
+    #region Startup
+    //Em Startup configuramos o Entity Framework
+    //para usar o banco de dados 
+    #endregion
     public class Startup
     {
         private readonly ILoggerFactory _loggerFactory;
@@ -35,9 +40,36 @@ namespace CasaDoCodigo
 
             string connectionString = Configuration.GetConnectionString("Default");
 
+            //DB 2): Configuração EF+Sql Server
+            #region Configuração EF+Sql Server
+            //O banco de dados SQL Server
+            //armazena dados do e-commerce
+            //(produtos, pedidos, cadastro, etc.)
+            //vide SQL Server Object Explorer 
+            #endregion
             services.AddDbContext<ApplicationContext>(options =>
                 options.UseSqlServer(connectionString)
             );
+
+            //DB 3): Identity + SQLite
+            #region SQLite
+            //1.Relacional
+            //2.Usa linguagem SQL 
+            //3.pequeno
+            //4.rápido
+            //5.independente
+            //6.confiável
+            //7.cheio de recursos.
+            //8.mais usado no mundo 
+            //https://www.sqlite.org/index.html
+            #endregion
+
+            //DB 4): EF + SQLite?
+            #region EF com outros bancos
+            //O Entity Framework pode trabalhar com
+            //diversos bancos de dados
+            //https://docs.microsoft.com/pt-br/ef/core/providers/index
+            #endregion
 
             services.AddTransient<IDataService, DataService>();
             services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
