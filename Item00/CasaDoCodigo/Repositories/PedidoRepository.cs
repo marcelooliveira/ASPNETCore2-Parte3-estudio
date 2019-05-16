@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace CasaDoCodigo.Repositories
 {
+    //MELHORIA: 6) Repositórios simplificados
     public interface IPedidoRepository
     {
         Task<Pedido> GetPedidoAsync();

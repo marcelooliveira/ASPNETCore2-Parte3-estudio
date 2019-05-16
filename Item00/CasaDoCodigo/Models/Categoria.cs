@@ -2,6 +2,7 @@
 
 namespace CasaDoCodigo.Models
 {
+    //MELHORIA: 3) Modelo agora inclui categoria
     public class Categoria : BaseModel
     {
         public Categoria() { }
