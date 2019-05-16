@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace CasaDoCodigo.Models
 {
+    //MELHORIA: 5) arquivo modelo.cs foi quebrado em vários arquivos
+    //veja o diagrama
     public class Pedido : BaseModel
     {
         public Pedido()

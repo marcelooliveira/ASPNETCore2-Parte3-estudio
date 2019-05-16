@@ -10,6 +10,8 @@ using Microsoft.Extensions.Logging;
 
 namespace CasaDoCodigo
 {
+    //MELHORIA: 7) Projeto atualizado para ASP.NET Core 2.2
+    //Veja propriedades do projeto
     public class Program
     {
         public static void Main(string[] args)

@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 
 namespace CasaDoCodigo
 {
+    //MELHORIA: 8) dados do cadastro gravados na sessão
     public class HttpHelper : IHttpHelper
     {
         private readonly IHttpContextAccessor contextAccessor;
