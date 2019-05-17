@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item01 - Instalando ASP.NET
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasaDoCodigo.MVC", "Item01\CasaDoCodigo\CasaDoCodigo.MVC.csproj", "{CBFDD151-6515-4F19-93C9-792C6F1CF1B7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item02 - Integrando ao Projeto", "Item02 - Integrando ao Projeto", "{7CCFF54F-52E5-479A-8308-91340218BF2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasaDoCodigo.MVC", "Item02\CasaDoCodigo\CasaDoCodigo.MVC.csproj", "{1178BC7C-38DE-4F90-B718-8132B6023552}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{CBFDD151-6515-4F19-93C9-792C6F1CF1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBFDD151-6515-4F19-93C9-792C6F1CF1B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBFDD151-6515-4F19-93C9-792C6F1CF1B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1178BC7C-38DE-4F90-B718-8132B6023552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1178BC7C-38DE-4F90-B718-8132B6023552}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1178BC7C-38DE-4F90-B718-8132B6023552}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1178BC7C-38DE-4F90-B718-8132B6023552}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{05320CF3-894A-4916-9A1A-91D584F79BDD} = {ED273BE1-670E-4270-8E58-5FC072E74608}
 		{CBFDD151-6515-4F19-93C9-792C6F1CF1B7} = {A89565DF-9CF7-4DA3-9E58-ADD9820E8B36}
+		{1178BC7C-38DE-4F90-B718-8132B6023552} = {7CCFF54F-52E5-479A-8308-91340218BF2D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E6252B83-4D85-46E0-9FC0-818D66E88BF6}
