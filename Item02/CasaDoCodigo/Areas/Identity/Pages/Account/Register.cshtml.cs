@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 
 namespace CasaDoCodigo.Areas.Identity.Pages.Account
 {
+    //ESTE É O MODELO DE UMA RAZOR PAGE!
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
@@ -21,6 +22,8 @@ namespace CasaDoCodigo.Areas.Identity.Pages.Account
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
+        //O MODELO DA PÁGINA É CRIADO POR INJEÇÃO 
+        //DE DEPENDÊNCIA!
         public RegisterModel(
             UserManager<AppIdentityUser> userManager,
             SignInManager<AppIdentityUser> signInManager,
