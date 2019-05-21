@@ -14,6 +14,8 @@ using Microsoft.Extensions.Logging;
 namespace CasaDoCodigo.Areas.Identity.Pages.Account
 {
     //ESTE É O MODELO DE UMA RAZOR PAGE!
+    //ELE CONTÉM OS MÉTODOS QUE ESTARIAM
+    //      NO CONTROLLER!
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
