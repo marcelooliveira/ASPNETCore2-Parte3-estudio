@@ -33,6 +33,12 @@ namespace CasaDoCodigo.Areas.Identity
                     options.UseSqlite(
                         context.Configuration.GetConnectionString("AppIdentityContextConnection")));
 
+                #region Traduzir erros
+                //TAREFA:  
+                //IMPLEMENTAR UMA NOVA CLASSE
+                //DESCRITORA DE ERROS
+                //EM PORTUGUÊS 
+                #endregion
                 services.AddDefaultIdentity<AppIdentityUser>()
                     .AddEntityFrameworkStores<AppIdentityContext>();
             });
