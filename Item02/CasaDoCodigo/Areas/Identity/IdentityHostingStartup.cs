@@ -28,7 +28,8 @@ namespace CasaDoCodigo.Areas.Identity
     {
         public void Configure(IWebHostBuilder builder)
         {
-            builder.ConfigureServices((context, services) => {
+            builder.ConfigureServices((context, services) =>
+            {
                 services.AddDbContext<AppIdentityContext>(options =>
                     options.UseSqlite(
                         context.Configuration.GetConnectionString("AppIdentityContextConnection")));
@@ -39,7 +40,12 @@ namespace CasaDoCodigo.Areas.Identity
                 //DESCRITORA DE ERROS
                 //EM PORTUGUÊS 
                 #endregion
-                services.AddDefaultIdentity<AppIdentityUser>()
+                services.AddDefaultIdentity<AppIdentityUser>(options =>
+                    {
+                        options.Password.RequireNonAlphanumeric = 
+                        options.Password.RequireLowercase = 
+                        options.Password.RequireUppercase = false;
+                    })
                     .AddErrorDescriber<IdentityErrorDescriberPtBr>()
                     .AddEntityFrameworkStores<AppIdentityContext>();
             });
