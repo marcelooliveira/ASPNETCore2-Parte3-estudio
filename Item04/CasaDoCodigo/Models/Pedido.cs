@@ -11,8 +11,9 @@ namespace CasaDoCodigo.Models
     //veja o diagrama
     public class Pedido : BaseModel
     {
-        public Pedido()
+        public Pedido(string clienteId)
         {
+            ClienteId = clienteId;
             Cadastro = new Cadastro();
         }
 
@@ -21,8 +22,9 @@ namespace CasaDoCodigo.Models
         //TAREFA 03: ADICIONAR MIGRAÇÃO
         //TAREFA 04: APLICAR MIGRAÇÃO
 
-        public Pedido(Cadastro cadastro)
+        public Pedido(string clienteId, Cadastro cadastro)
         {
+            ClienteId = clienteId;
             Cadastro = cadastro;
         }
 
