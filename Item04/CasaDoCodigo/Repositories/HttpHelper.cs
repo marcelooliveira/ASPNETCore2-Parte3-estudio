@@ -29,13 +29,6 @@ namespace CasaDoCodigo
             return contextAccessor.HttpContext.Session.GetInt32($"pedidoId_{GetClienteId()}");
         }
 
-        private string GetClienteId()
-        {
-            var claimsPrincipal = contextAccessor.HttpContext.User;
-            var clienteId = userManager.GetUserId(claimsPrincipal);
-            return clienteId;
-        }
-
         public void SetPedidoId(int pedidoId)
         {
             contextAccessor.HttpContext.Session.SetInt32($"pedidoId_{GetClienteId()}", pedidoId);
@@ -44,6 +37,12 @@ namespace CasaDoCodigo
         public void ResetPedidoId()
         {
             contextAccessor.HttpContext.Session.Remove($"pedidoId_{GetClienteId()}");
+        }
+
+        private string GetClienteId()
+        {
+            var claimsPrincipal = contextAccessor.HttpContext.User;
+            return userManager.GetUserId(claimsPrincipal);
         }
     }
 }
