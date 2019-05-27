@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 namespace CasaDoCodigo.Repositories
 {
     //MELHORIA: 6) Repositórios simplificados
+    
     public interface IPedidoRepository
     {
         Task<Pedido> GetPedidoAsync();
@@ -21,6 +22,7 @@ namespace CasaDoCodigo.Repositories
         Task<Pedido> UpdateCadastroAsync(Cadastro cadastro);
     }
 
+    //TAREFA 06: INJETAR UserManager PARA OBTER clienteId
     public class PedidoRepository : BaseRepository<Pedido>, IPedidoRepository
     {
         private readonly IHttpContextAccessor contextAccessor;
@@ -83,7 +85,7 @@ namespace CasaDoCodigo.Repositories
 
             if (pedido == null)
             {
-                pedido = new Pedido(httpHelper.GetCadastro());
+                pedido = new Pedido();
                 await dbSet.AddAsync(pedido);
                 await contexto.SaveChangesAsync();
                 httpHelper.SetPedidoId(pedido.Id);
@@ -121,7 +123,6 @@ namespace CasaDoCodigo.Repositories
             var pedido = await GetPedidoAsync();
             await cadastroRepository.UpdateAsync(pedido.Cadastro.Id, cadastro);
             httpHelper.ResetPedidoId();
-            httpHelper.SetCadastro(pedido.Cadastro);
             return pedido;
         }
 
