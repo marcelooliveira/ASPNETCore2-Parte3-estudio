@@ -82,6 +82,10 @@ namespace CasaDoCodigo
             //com a conta da Microsoft
             //https://apps.dev.microsoft.com/
 
+            //TAREFA: Permitir login externo 
+            //com a conta do Google
+            //https://developers.google.com/identity/sign-in/web/sign-in
+
             services.AddAuthentication()
                 .AddMicrosoftAccount(options =>
                 {
