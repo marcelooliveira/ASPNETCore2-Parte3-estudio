@@ -80,6 +80,7 @@ namespace CasaDoCodigo
 
             //TAREFA: Permitir login externo 
             //com a conta da Microsoft
+            //https://apps.dev.microsoft.com/
         }
 
 
