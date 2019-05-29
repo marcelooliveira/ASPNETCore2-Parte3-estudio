@@ -81,6 +81,13 @@ namespace CasaDoCodigo
             //TAREFA: Permitir login externo 
             //com a conta da Microsoft
             //https://apps.dev.microsoft.com/
+
+            services.AddAuthentication()
+                .AddMicrosoftAccount(options =>
+                {
+                    options.ClientId = Configuration["ExternalLogin:Microsoft:ClientId"];
+                    options.ClientSecret = Configuration["ExternalLogin:Microsoft:ClientSecret"];
+                });
         }
 
 
